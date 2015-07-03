@@ -106,29 +106,31 @@ public:
         pchMessageStart[1] = 0xfe;
         pchMessageStart[2] = 0xfe;
         pchMessageStart[3] = 0x05;
-        nDefaultPort = 55534;
-        nRPCPort = 55535;
+        nDefaultPort = 55537;
+        nRPCPort = 55539;
         strDataDir = "testnet";
 
         // Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1374901773;
-        genesis.nNonce = 1211565;
+        genesis.nTime = 2;
+        genesis.nNonce = 1294578;
         
         
         //// debug print
-        hashGenesisBlock = genesis.GetHash();
+        //hashGenesisBlock = genesis.GetHash();
         //while (hashGenesisBlock > bnProofOfWorkLimit.getuint256()){
         //    if (++genesis.nNonce==0) break;
-        //   hashGenesisBlock = genesis.GetHash();
+           hashGenesisBlock = genesis.GetHash();
         //}
 
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
         genesis.print();
+        
+        assert(hashGenesisBlock == uint256("0x00000374e85c69e9d39c5f033b2a56656af20b094c58a4a02c5d7a5fe3f3805f"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        // vSeeds.push_back(CDNSSeedData("skidoo.test", "test.skidoo.org"));
+        vSeeds.push_back(CDNSSeedData("23skidoo.info", "23skidoo.info"));
 
         base58Prefixes[PUBKEY_ADDRESS] = 130;
         base58Prefixes[SCRIPT_ADDRESS] = 30;
@@ -152,25 +154,25 @@ public:
         pchMessageStart[3] = 0x5a;
         nSubsidyHalvingInterval = 150;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 1);
-        genesis.nTime = 1296688602;
+        genesis.nTime = 3;
         genesis.nBits = 0x207fffff;
-        genesis.nNonce = 3;
+        genesis.nNonce = 0;
         hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 18444;
+        nDefaultPort = 18449;
         strDataDir = "regtest";
         
         //// debug print
-        hashGenesisBlock = genesis.GetHash();
+        //hashGenesisBlock = genesis.GetHash();
         //while (hashGenesisBlock > bnProofOfWorkLimit.getuint256()){
         //    if (++genesis.nNonce==0) break;
-        //    hashGenesisBlock = genesis.GetHash();
+        	hashGenesisBlock = genesis.GetHash();
         //}
 
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
         genesis.print();
 
-        // assert(hashGenesisBlock == uint256("0x13d8d31dde96874006da503dd2b63fa68c698dc823334359e417aa3a92f80433"));
+        assert(hashGenesisBlock == uint256("0x6ab959b5298beee3869bb1db223e436a043ac833329e7f6fa0e9c6520ac53157"));
 
         vSeeds.clear();  // Regtest mode doesn't have any DNS seeds.
 
