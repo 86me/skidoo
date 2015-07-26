@@ -49,7 +49,6 @@ private slots:
     void updateDisplayUnit();
     void handleTransactionClicked(const QModelIndex &index);
     void updateAlerts(const QString &warnings);
-    void on_pushButton_clicked();
 };
 
 #endif // OVERVIEWPAGE_H
