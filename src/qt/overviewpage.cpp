@@ -215,8 +215,3 @@ void OverviewPage::showOutOfSyncWarning(bool fShow)
     ui->labelTransactionsStatus->setVisible(fShow);
 }
 
-void OverviewPage::on_pushButton_clicked()
-{
-    QString link="http://23skidoo.info/decoderring";
-    QDesktopServices::openUrl(QUrl(link));
-}

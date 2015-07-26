@@ -258,19 +258,19 @@ void BitcoinGUI::createActions(bool fIsTestnet)
         toggleHideAction = new QAction(QIcon(":/icons/bitcoin_testnet"), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
 
-    encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Skidoo..."), this);
+    encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Enigmatize Skidoo..."), this);
     encryptWalletAction->setStatusTip(tr("Hide your private keys behind password--better write it down!"));
     encryptWalletAction->setCheckable(true);
     backupWalletAction = new QAction(QIcon(":/icons/filesave"), tr("&Quantum Shift Skidoo..."), this);
     backupWalletAction->setStatusTip(tr("Copy your Chao, but not multiply them"));
     changePassphraseAction = new QAction(QIcon(":/icons/key"), tr("&Change Encryption..."), this);
-    changePassphraseAction->setStatusTip(tr("You did remember to write down the password? Its not Jublum"));
+    changePassphraseAction->setStatusTip(tr("You did remember to write down the password? Its not Jubelum"));
     signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
     signMessageAction->setStatusTip(tr("Hail Eris"));
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
     verifyMessageAction->setStatusTip(tr("Hail Discordia"));
 
-    openRPCConsoleAction = new QAction(QIcon(":/icons/debugwindow"), tr("&TextBox"), this);
+    openRPCConsoleAction = new QAction(QIcon(":/icons/debugwindow"), tr("&Textual Interaction"), this);
     openRPCConsoleAction->setStatusTip(tr("Direct interaction with Discord"));
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
@@ -296,7 +296,7 @@ void BitcoinGUI::createMenuBar()
 #endif
 
     // Configure the menus
-    QMenu *file = appMenuBar->addMenu(tr("&File"));
+    QMenu *file = appMenuBar->addMenu(tr("&Actions"));
     file->addAction(backupWalletAction);
     file->addAction(signMessageAction);
     file->addAction(verifyMessageAction);
@@ -304,6 +304,7 @@ void BitcoinGUI::createMenuBar()
     file->addAction(changePassphraseAction);
     file->addSeparator();
     file->addAction(optionsAction);
+    file->addAction(openRPCConsoleAction);
     file->addSeparator();
     file->addAction(quitAction);
 
@@ -321,7 +322,6 @@ void BitcoinGUI::createToolBars()
     toolbar->addAction(receiveCoinsAction);
     toolbar->addAction(historyAction);
     toolbar->addAction(addressBookAction);
-    toolbar->addAction(openRPCConsoleAction);
 }
 
 void BitcoinGUI::setClientModel(ClientModel *clientModel)
