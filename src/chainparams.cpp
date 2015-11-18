@@ -60,8 +60,16 @@ public:
         assert(hashGenesisBlock == uint256("0x0000074e6840be44f43857beb3a16350f99182bc1ce64088a7b405aaec3cedb3"));
         assert(genesis.hashMerkleRoot == uint256("0x921c1604d9b02fe2329599e548f53c07c34b26eb22447cff171183921c3dd14e"));
 
-        vSeeds.push_back(CDNSSeedData("23skidoo.info", "23skidoo.info"));
-
+        vSeeds.push_back(CDNSSeedData("seed1.23skidoo.info", "seed1.23skidoo.info"));
+        vSeeds.push_back(CDNSSeedData("seed2.23skidoo.info", "seed2.23skidoo.info"));
+        vSeeds.push_back(CDNSSeedData("seed3.23skidoo.info", "seed3.23skidoo.info"));
+        vSeeds.push_back(CDNSSeedData("seed4.23skidoo.info", "seed4.23skidoo.info"));
+        vSeeds.push_back(CDNSSeedData("seed5.23skidoo.info", "seed5.23skidoo.info"));
+        vSeeds.push_back(CDNSSeedData("seed6.23skidoo.info", "seed6.23skidoo.info"));
+        vSeeds.push_back(CDNSSeedData("seed7.23skidoo.info", "seed7.23skidoo.info"));
+        vSeeds.push_back(CDNSSeedData("seed8.23skidoo.info", "seed8.23skidoo.info"));
+        vSeeds.push_back(CDNSSeedData("seed9.23skidoo.info", "seed9.23skidoo.info"));
+        vSeeds.push_back(CDNSSeedData("seed10.23skidoo.info", "seed10.23skidoo.info"));
 
         base58Prefixes[PUBKEY_ADDRESS] = 142;
         base58Prefixes[SCRIPT_ADDRESS] = 142;
